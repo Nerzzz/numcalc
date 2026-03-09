@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+:root{
+    --background: #fffbf7;
+    --foreground: #45372b;
+    --accent: #df7020;
+
+    --fira-code: "Fira Code";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fira-code);
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+body{
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    border: solid var(--foreground) 2px;
+
+    .header{
+        display: flex;
+        gap: 8pt;
+    
+        a{
+            color: var(--foreground);
+            font-weight: 600;
+            border-bottom: 2px solid var(--foreground);
+            text-decoration: none;
+        }
+    }
+    
+    .input_config{
+        display: flex;
+        flex-direction: column;
+        gap: 13pt;
+
+        header{
+            display: flex;
+            
+            h1{
+                padding: 6px;
+                background-color: var(--accent);
+                width: fit-content;
+                color: var(--background);
+                font-weight: 500;
+            }
+
+            .deco{
+                background: repeating-linear-gradient(
+                    to right,
+                    var(--accent) 0px,
+                    var(--accent) 2px,
+                    transparent 2px,
+                    transparent 8px
+                );
+                flex:1;
+            }
+        }
+
+        .op{
+            display: flex;
+            flex-direction: column;
+            padding: 28px;
+            border: dashed var(--foreground) 2px;
+            gap: 13pt;
+
+            select{
+                background-color: var(--background);
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    .main_content{
+        display: flex;
+        flex-direction: column;
+        gap: 13pt;
+
+        header{
+            display: flex;
+
+            h1{
+                padding: 6px;
+                background-color: var(--accent);
+                width: fit-content;
+                color: var(--background);
+                font-weight: 500;
+            }
+    
+            .deco{
+                background: repeating-linear-gradient(
+                    to right,
+                    var(--accent) 0px,
+                    var(--accent) 2px,
+                    transparent 2px,
+                    transparent 8px
+                );
+                flex:1;
+            }
+        }
+
+        .input_zone{
+            input{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                text-transform: uppercase;
+            }
+        }
+
+        #outValue{
+            background-color: var(--foreground);
+            color: var(--background);
+            padding: 6px;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    
+    a{
+        color: var(--foreground);
+        font-weight: 600;
+        border-bottom: 2px solid var(--foreground);
+        text-decoration: none;
+    }
+}
