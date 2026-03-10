@@ -10,5 +10,7 @@ function calculate(){
         return;
     }
 
+    if(fromBase == 2 && !/[0-1]/.test(value)) return;
+
     document.getElementById("outValue").innerHTML = decimal.toString(toBase).toUpperCase();
 }
