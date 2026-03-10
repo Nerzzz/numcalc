@@ -117,11 +117,6 @@ main{
         }
 
         .input_zone{
-            label{
-                background-color: var(--foreground);
-                color: var(--background);
-                padding: 6px;
-            }
             input{
                 background-color: transparent;
                 border: none;
@@ -130,10 +125,32 @@ main{
             }
         }
 
-        #outValue{
-            background-color: var(--foreground);
-            color: var(--background);
-            padding: 6px;
+        .out_zone{
+            display: flex;
+            gap: 13px;
+            #outValue{
+                background-color: var(--foreground);
+                color: var(--background);
+                padding: 6px;
+                outline: none;
+                border: none;
+                flex: 1;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 33px;
+                height: 33px;
+                background-color: var(--accent);
+                border: none;
+                outline: none;
+                cursor: pointer;
+                
+                svg{
+                    color: var(--background);
+                }
+            }
         }
     }
 }
@@ -150,4 +167,8 @@ footer{
         border-bottom: 2px solid var(--foreground);
         text-decoration: none;
     }
+}
+
+@media screen and (max-width: 500px) {
+    main{ border: none; }
 }

@@ -15,7 +15,7 @@ https://numcalcsd.vercel.app
 - JavaScript (Vanilla).
 
 ## Screenshots
-![Captura de tela do sistema](./screenshot.png)
+![Captura de tela do sistema](./images/screenshot.png)
 
 
 Feito por: [Nerzzz](https://github.com/Nerzzz).
