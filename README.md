@@ -1,5 +1,5 @@
 # Numcalc
-Numcalc é uma calculadora para conversão de bases numéricas.
+Numcalc é uma calculadora web que converte números entre diferentes bases numéricas de forma instantânea.
 
 ## Demo
 https://numcalcsd.vercel.app
@@ -10,12 +10,12 @@ https://numcalcsd.vercel.app
 - Resultado em tempo real.
 
 ## Tecnologias
-- HTML
-- CSS
-- JavaScript
+- HTML;
+- CSS;
+- JavaScript (Vanilla).
 
 ## Screenshots
-![Captura de tela do sistema](./screenshot.png).
+![Captura de tela do sistema](./screenshot.png)
 
 
-Feito por: [Nerzzz](https://github.com/Nerzzz)
+Feito por: [Nerzzz](https://github.com/Nerzzz).
