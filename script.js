@@ -3,32 +3,33 @@ function calculate(){
     const fromBase = parseInt(document.getElementById("inBase").value);
     const toBase = parseInt(document.getElementById("outBase").value);
 
-    if(value == ""){
-        document.getElementById("outValue").value = "Esperando entrada...";
-        return;
-    }
+    const patterns = {
+        2: /^[01]+$/,
+        8: /^[0-7]+$/,
+        10: /^[0-9]+$/,
+        16: /^[0-9A-Fa-f]+$/
+    };
     
-    if(fromBase == 2 && !/[0-1]/.test(value)){
-        document.getElementById("outValue").value = "Apenas 0 e 1 aceitos";
-        return;
-    }
-    if(fromBase == 8 || fromBase == 10 && /[A-Za-z]/.test(value)){
-        document.getElementById("outValue").value = "Não utilize letras para essa base";
-        return;
-    }
-    if(fromBase == 16 && /[G-Zg-z]/.test(value)){
-        document.getElementById("outValue").value = "Caracteres inválidos";
+    const output = document.getElementById("outValue");
+
+    if(value == ""){
+        output.value = "Esperando entrada...";
         return;
     }
 
-    decimal = parseInt(value, fromBase);
+    if(!patterns[fromBase].test(value)){
+        output.value = "Caracteres inválidos";
+        return 
+    }
+
+    const out_value = parseInt(value, fromBase);
 
     if(isNaN(decimal)){
-        document.getElementById("outValue").value = "Preencha corretamente";
+        out_value.value = "Preencha corretamente";
         return;
     }
 
-    document.getElementById("outValue").value = decimal.toString(toBase).toUpperCase();
+    output.value = out_value.toString(toBase).toUpperCase();
 }
 
 function copyOutput(){

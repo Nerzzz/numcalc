@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
 }
 
 
@@ -117,8 +117,12 @@ main{
         }
 
         .input_zone{
+            display: flex;
+            gap: 13px;
+
             input{
                 background-color: transparent;
+                flex: 1;
                 border: none;
                 outline: none;
                 text-transform: uppercase;
@@ -128,6 +132,7 @@ main{
         .out_zone{
             display: flex;
             gap: 13px;
+
             #outValue{
                 background-color: var(--foreground);
                 color: var(--background);
