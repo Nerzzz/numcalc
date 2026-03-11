@@ -24,7 +24,7 @@ function calculate(){
 
     const out_value = parseInt(value, fromBase);
 
-    if(isNaN(decimal)){
+    if(isNaN(out_value)){
         out_value.value = "Preencha corretamente";
         return;
     }
